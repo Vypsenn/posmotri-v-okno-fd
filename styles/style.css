@@ -64,7 +64,6 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  gap: 40px;
 }
 
 .content__details {
@@ -102,6 +101,7 @@ ol {
 
 .content__list-item {
   gap: 2px;
+  padding: 0 3px;
 }
 
 .content__video-card {
@@ -191,7 +191,8 @@ ol {
   text-align: justify;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
 }
 
@@ -200,6 +201,7 @@ ol {
   min-width: 225px;
   height: 54px;
   gap: 5px;
+  justify-self: end;
 }
 
 .search-form__label {
@@ -211,11 +213,6 @@ ol {
   outline: 1px solid white;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -225,6 +222,7 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
 .search-form__textfield {
   width: 225px;
   height: 27px;
@@ -287,10 +285,13 @@ ol {
 }
 
 .button:hover,
-.content__list-item:hover {
+.content__list-item:hover,
+.search-form__label:hover:has(.search-form__checkbox) {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.search-form__checkbox-list
 
 .button:active,
 .content__card-link_current:active {
@@ -311,10 +312,6 @@ ol {
   width: 194px;
   height: 34px;
   justify-self: end;
-}
-
-.content__list-item {
-  padding: 0 3px;
 }
 
 .more-button {
